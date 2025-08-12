@@ -9,6 +9,8 @@ import Talk from "./components/dash/Talk";
 import ScheduleAppointment from "./components/dash/ScheduleAppointment";
 import BMICalculator from "./components/dash/BMICalculator";
 import DietAndTips from "./components/dash/DietAndTips";
+import GroceryList from "./components/dash/Grocery";
+
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
             element={<ScheduleAppointment />}
           />
           <Route path="bmi" element={<BMICalculator />} />
+          <Route path="grocery" element={<GroceryList />} />
+
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>

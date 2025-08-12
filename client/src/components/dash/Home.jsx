@@ -32,13 +32,13 @@ const Home = () => {
         {navItems.map((item, index) => (
           <li key={index} className="nav-item">
             <NavLink
-              to={item.to}
-              className="nav-link"
-              activeClassName="active"
-              onClick={toggle}
-            >
-              {item.name}
-            </NavLink>
+  to={item.to}
+  className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+  onClick={toggle}
+>
+  {item.name}
+</NavLink>
+
           </li>
         ))}
       </ul>
